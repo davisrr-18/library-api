@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Library API (local H2)",
+      "request": "launch",
+      "mainClass": "com.davisrr.libraryapi.LibraryApiApplication",
+      "projectName": "library-api",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "local"
+      }
+    },
+    {
+      "type": "java",
+      "name": "Library API (Docker MySQL)",
+      "request": "launch",
+      "mainClass": "com.davisrr.libraryapi.LibraryApiApplication",
+      "projectName": "library-api",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
