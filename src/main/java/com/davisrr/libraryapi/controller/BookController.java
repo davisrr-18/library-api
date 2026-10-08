@@ -1,9 +1,5 @@
 package com.davisrr.libraryapi.controller;
 
-// Fase 1 — complete after BookService works:
-// POST /api/v1/books -> 201 Created + BookResponse body (@Valid on request)
-// GET  /api/v1/books -> 200 OK + JSON array of BookResponse
-
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
