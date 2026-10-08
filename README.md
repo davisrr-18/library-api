@@ -84,8 +84,8 @@ docker-compose.yml
 
 - [x] Health check (`GET /api/v1/health`)
 - [x] MySQL via Docker Compose; optional H2 profile for local runs
-- [ ] Book registration (auto ID, required title/author, no duplicate title+author)
-- [ ] List books
+- [x] Book registration (auto ID, required title/author, no duplicate title+author)
+- [x] List books
 - [ ] Search books by title or author
 - [ ] List available books
 - [ ] Reader registration and lookup
@@ -107,8 +107,8 @@ Base path: `/api/v1`
 | Use case | Method and path | Status |
 |----------|-----------------|--------|
 | Health | `GET /health` | Available |
-| Register book | `POST /books` | Planned |
-| List books | `GET /books` | Planned |
+| Register book | `POST /books` | Available |
+| List books | `GET /books` | Available |
 | Search / filter | `GET /books?search=` / `?available=true` | Planned |
 | Register reader | `POST /readers` | Planned |
 | Get reader | `GET /readers/{id}` | Planned |
