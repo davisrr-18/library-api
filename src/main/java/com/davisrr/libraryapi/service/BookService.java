@@ -1,8 +1,9 @@
 package com.davisrr.libraryapi.service;
 
 import java.util.Comparator;
-import java.util.stream.Collectors;
 import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import com.davisrr.libraryapi.dto.BookResponse;
 import com.davisrr.libraryapi.dto.CreateBookRequest;
@@ -33,6 +34,19 @@ public class BookService {
         return bookRepository.findAll().stream()
                 .map(BookResponse::new)
                 .sorted(Comparator.comparing(BookResponse::id))
+                .collect(Collectors.toList());
+    }
+
+    public List<BookResponse> searchByTerm(String term) {
+        String normalized = term.trim();
+        if (normalized.isEmpty()) {
+            return List.of();
+        }
+        return bookRepository
+                .findByTitleContainingIgnoreCaseOrAuthorContainingIgnoreCase(normalized, normalized)
+                .stream()
+                .map(BookResponse::new)
+                .sorted(Comparator.comparing(book -> book.title().toLowerCase(Locale.ROOT)))
                 .collect(Collectors.toList());
     }
 }
