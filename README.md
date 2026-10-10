@@ -88,8 +88,8 @@ docker-compose.yml
 - [x] List books
 - [ ] Search books by title or author
 - [ ] List available books
-- [ ] Reader registration and lookup
-- [ ] List readers
+- [x] Reader registration and lookup
+- [x] List readers
 - [ ] Loan and return
 - [ ] Domain exceptions mapped to HTTP status codes
 
@@ -110,9 +110,9 @@ Base path: `/api/v1`
 | Register book | `POST /books` | Available |
 | List books | `GET /books` | Available |
 | Search / filter | `GET /books?search=` / `?available=true` | Planned |
-| Register reader | `POST /readers` | Planned |
-| Get reader | `GET /readers/{id}` | Planned |
-| List readers | `GET /readers` | Planned |
+| Register reader | `POST /readers` | Available |
+| Get reader | `GET /readers/{id}` | Available |
+| List readers | `GET /readers` | Available |
 | Loan | `POST /loans` | Planned |
 | Return | `POST /loans/returns` | Planned |
 
